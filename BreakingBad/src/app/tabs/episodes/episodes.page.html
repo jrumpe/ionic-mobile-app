@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Episodes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of episodesData">
+    <ion-card-header>
+      <ion-card-title> {{item.title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label >Air Date: {{item.air_date}}</ion-label>
+        <ion-card-subtitle >Episode: {{item.episode}}</ion-card-subtitle>
+      </ion-item>
+      <ion-list>
+        <ion-item>
+          <ion-card-subtitle slot="start">Characters</ion-card-subtitle>
+          <p slot="end">{{item.characters}}</p>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
